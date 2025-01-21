@@ -15,7 +15,7 @@ interface ServerMessage {
   timestamp: string;
 }
 
-const socketUrl = "http://localhost:7623";
+const socketUrl = process.env.NEXT_BASE_URL || "http://localhost:7623";
 
 const Chat: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
